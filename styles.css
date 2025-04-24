@@ -1,0 +1,405 @@
+/* Estilos generales */
+:root {
+    --primary: #2563eb;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --gray: #64748b;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Asegúrate de haber importado la fuente Inter */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light); /* Fondo blanco por defecto para otras páginas */
+}
+
+/* Estilos específicos para la página de inicio */
+body.home-page {
+    background-image: url('https://www.jadeglobal.com/sites/default/files/2022-09/Top-Hi-Tech-trends-shaping-the-future.jpg');
+    background-size: cover; /* Cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.nav-menu li {
+    flex-shrink: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.nav-menu a.active {
+    color: var(--primary);
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    /* Añadimos un fondo semitransparente para mejorar la legibilidad del texto sobre la imagen */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 3rem;
+    margin-top: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Team */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Cursos - MODIFICADO */
+main.container {
+    display: flex;
+    flex-direction: column; /* Alinea las secciones de los cursos verticalmente */
+    gap: 3rem; /* Espacio entre las secciones de los cursos */
+    padding: 2rem 1rem;
+    align-items: center; /* Centra las secciones horizontalmente */
+}
+
+.course-section {
+    display: flex;
+    flex-direction: column; /* Alinea el título, la imagen y el botón verticalmente dentro de cada sección */
+    align-items: center; /* Centra el contenido horizontalmente dentro de la sección */
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.course-section h2 {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+/* Contenedor de imágenes */
+.course-image-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+    display: block; /* Asegura que el contenedor ocupe una línea completa */
+    position: relative;
+    overflow: hidden;
+}
+
+.course-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina el espacio blanco debajo de la imagen */
+    border-radius: 8px;
+    object-fit: contain;
+    max-height: 350px;
+}
+
+/* Blog */
+.blog-post {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    min-height: 150px;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #1e40af;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav {
+        text-align: center;
+    }
+    .nav-menu {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .course-section {
+        padding: 1rem;
+    }
+
+    .course-image-container {
+        max-width: 100%;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark);
+        color: var(--light);
+    }
+
+    header {
+        background: var(--dark);
+        box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+    }
+
+    .nav-menu a {
+        color: var(--light);
+    }
+    .nav-menu a.active {
+        color: var(--primary);
+    }
+    .nav-menu a:hover {
+        color: var(--primary);
+    }
+
+    footer {
+        background: var(--dark);
+        color: var(--light);
+    }
+
+    .course-section {
+        background: #2c3e50;
+        border-color: #374151;
+        color: var(--light);
+    }
+
+    .course-section h2 {
+        color: var(--primary);
+    }
+
+    .blog-post {
+        background: #2c3e50;
+        border-color: #374151;
+        color: var(--light);
+    }
+
+    .blog-post h2 {
+        color: var(--primary);
+    }
+
+    .form-group label {
+        color: var(--light);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: var(--light);
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Apply animations */
+.hero h1 {
+    animation: fadeIn 1s ease-in-out;
+}
+.course-section {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-italic {
+    font-style: italic;
+}
